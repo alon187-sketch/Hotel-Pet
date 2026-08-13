@@ -8,23 +8,38 @@
 
 <body>
 
-    <header>
-        
-        <h1>Hotel Pet</h1>
-        <p> <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário" align="right"> </p>
-        <p> João da Silva </p>
+    
+<table border="1">
+    <tr>
+        <td rowspan="2">
+            <header>
+                <h1>Hotel Pet</h1>
 
-        <a href="#"><img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">Pet</a><br>
-        <a href="#"><img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">Usuários</a><br>
-        <a href="#"><img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">Configurações</a><br>
-        <a href="#"><img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">Reservas</a>
+                <a href="#"><img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">Pet</a><br>
+                <a href="#"><img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">Usuários</a><br>
+                <a href="#"><img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">Configurações</a><br>
+                <a href="#"><img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">Reservas</a>
 
-    </header>
+            </header>
+        </td>
+
+        <td>
+        <p> <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário"> </p>
+        <p> João da Silva</p>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
 
     <main>
+
         <p>Home / Usuários</p>
 
-        <h2>Usuários</h2>
+        <form>
+            <fieldset>
+                <h2>Usuários</h2>
 
         <section>
             <button type="button"> <img src="Imagens/novo.jpg" width="20" height="20" alt="Ícone novo">Novo</button>
@@ -41,69 +56,59 @@
             <button type="button">Usuários</button>
             <button type="button">Função</button>
         </section>
-
         <br>
 
-
-        <form>
+        <fieldset>
                 <table>
                     <tr>
                         <td>
-                            <label> Id: <input type="text" </label>
+                            <p><label> Id: <input type="text" </label></p>
                         </td>
 
                         <td>
-                            <label> Criado em: <input type="date"> </label><br>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <label> e-mail: <input type="email"> </label><br>
-                        </td>
-
-                        <td>
-                            <label> Nome: <input type="text"> </label><br>
+                            <p><label> Criado em: <input type="date"> </label></p>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <label> Status</label>
+                            <p><label> e-mail: <input type="email"> </label></p>
+                        </td>
+
+                        <td>
+                            <p><label> Nome: <input type="text"> </label></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p><label> Status</label>
 
                             <select name="status">
                                 <option value="--Nenhum--">Selecione</option>
                                 <option value="ativo">Ativo</option>
                                 <option value="inativo">Inativo</option>
-                            </select>
+                            </select></p>
                         </td>
 
                         <td>
-                            <label> Função</label>
+                            <p><label> Função</label>
 
                             <select name="funcao">
                                 <option value="--Nenhum--">Selecione</option>
                                 <option value="gerente">Gerente</option>
                                 <option value="funcionario">Funcionário</option>
                                 <option value="cliente">Cliente</option>
-                            </select>
+                            </select></p>
                         </td>
                     </tr>
                 </table>
-
-                <br>
-
-                <button type="submit"> <img src="Imagens/pesquisar.jpg" width="20" height="20" alt="Ícone de Pesquisar">Pesquisar</button>
-                <button type="reset"> <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">Limpar</button>
-
-        </form>
-
-        <br>
-
-        <section>
+    
+        <button type="submit"> <img src="Imagens/pesquisar.jpg" width="20" height="20" alt="Ícone de Pesquisar">Pesquisar</button>
+        <button type="reset"> <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">Limpar</button>
+    </fieldset> 
 
             <table border="1">
-
                 <thead>
                     <tr>
                         <th></th>
@@ -149,7 +154,7 @@
                         </td>
                     </tr>
 
-                                        <tr>
+                    <tr>
                         <td><input type="checkbox"></td>
                         <td><img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário"></td>
                         <td>josedasilva@pet.com</td>
@@ -168,7 +173,14 @@
 
             </table>
 
-        </section>
+        </td>
+    </tr>
+    
+</table>
+
+        </fieldset>
+
+    </form>
 
     </main>
 
