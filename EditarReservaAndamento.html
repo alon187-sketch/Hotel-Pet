@@ -1,80 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Editar Reserva en andamento</title>
+    <title>Editar Reserva em andamento</title>
 </head>
+
 <body>
 
+    <table border="1" width="100%">
+        <tr>
+            <td rowspan="2" width="20%">
 
-<table border="1", width="100%">
-    <tr>
-        <td rowspan="2", width="20%">
+                <header>
+                    <h1>Hotel Pet</h1>
 
-    <header>
-        
-        <h1>Hotel Pet</h1>
+                    <a href="Pets.html">
+                        <img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">
+                        Pet
+                    </a>
+                    <br>
 
-                <a href="Pets.html"><img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">Pet</a><br>
-                <a href="Usuarios.html"><img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">Usuários</a><br>
-                <a href="Configuracoes.html"><img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">Configurações</a><br>
-                <a href="Reserva.html"><img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">Reservas</a>
+                    <a href="Usuarios.html">
+                        <img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">
+                        Usuários
+                    </a>
+                    <br>
 
-    </header>
+                    <a href="Configuracoes.html">
+                        <img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">
+                        Configurações
+                    </a>
+                    <br>
 
-        </td>
+                    <a href="Reserva.html">
+                        <img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">
+                        Reservas
+                    </a>
+                </header>
 
-        <td>
-        <p> <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário"> </p>
-        <p> João da Silva</p>
-        </td>
+            </td>
 
-    </tr>
+            <td>
+                <p>
+                    <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário">
+                </p>
 
-    <tr>
-        <td>
+                <p>João da Silva</p>
+            </td>
+        </tr>
 
-    <p>Home / revervas / editar reserva</p>
+        <tr>
+            <td>
 
-    <h2>Editar reserva</h2>
+                <p>Home / Reservas / Editar reserva</p>
 
-    <form>
-        <fieldset>
-        <p><label> Proprietário * <br> <input type="text" > </label></p>
-        <p><label> Pet * <br> <input type="text" > </label></p>
-        <p><label> Período * <br> <input type="date" > <input type="date" > </label></p>
-        <p><label> Notas <br> <textarea rows="5" cols="50" ></textarea> </label></p>
+                <h2>Editar reserva</h2>
 
+                <form>
+                    <fieldset>
 
-        <label>Status*</label><br>
-            <select name="status">
-                <option value="em-andamento" selected>Em andamento</option>
-                <option value="concluido">Concluído</option>
-                <option value="cancelado">Cancelado</option>
-            </select>
-    
-        <p><label> Anotações do funcionário <br> <textarea rows="5" cols="50"></textarea> </label></p>
+                        <p>
+                            <label>
+                                Proprietário *<br>
+                                <input type="text">
+                            </label>
+                        </p>
 
+                        <p>
+                            <label>
+                                Pet *<br>
+                                <input type="text">
+                            </label>
+                        </p>
 
-        <p>
-            <img src="Imagens/quadrodo comx.jpg" width="80" height="80" alt="Imagem com X" align="left" >
-            <button type="button" style="width:80px; height:80px;">+</button>
-        </p>
+                        <p>
+                            <label>
+                                Período *<br>
+                                <input type="date">
+                                <input type="date">
+                            </label>
+                        </p>
 
-        <p>Total das diárias: <strong>R$ 40,00</strong></p>
+                        <p>
+                            <label>
+                                Notas<br>
+                                <textarea rows="5" cols="50"></textarea>
+                            </label>
+                        </p>
 
+                        <label>Status*</label>
+                        <br>
 
-        <p>
-            <button type="submit"><img src="Imagens/salvar.jpg" width="20" height="20" alt="Ícone de salvar"> Salvar </button>
-            <button type="reset"><img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar"> Limpar</button>
-        </p>
-    </fieldset>
-    </form>
+                        <select name="status">
+                            <option value="em-andamento" selected>Em andamento</option>
+                            <option value="concluido">Concluído</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
 
-         </td>
-    </tr>
-    
-</table>
+                        <p>
+                            <label>
+                                Anotações do funcionário<br>
+                                <textarea rows="5" cols="50"></textarea>
+                            </label>
+                        </p>
+
+                        <p>
+                            <img src="Imagens/quadrodo comx.jpg"
+                                 width="80"
+                                 height="80"
+                                 alt="Imagem com X"
+                                 align="left">
+
+                            <button type="button" style="width:80px; height:80px;">
+                                +
+                            </button>
+                        </p>
+
+                        <p>
+                            Total das diárias: <strong>R$ 40,00</strong>
+                        </p>
+
+                        <p>
+                            <button type="submit">
+                                <img src="Imagens/salvar.jpg"
+                                     width="20"
+                                     height="20"
+                                     alt="Ícone de salvar">
+                                Salvar
+                            </button>
+
+                            <button type="reset">
+                                <img src="Imagens/limpar.jpg"
+                                     width="20"
+                                     height="20"
+                                     alt="Ícone de limpar">
+                                Limpar
+                            </button>
+                        </p>
+
+                    </fieldset>
+                </form>
+
+            </td>
+        </tr>
+    </table>
 
 </body>
+
 </html>

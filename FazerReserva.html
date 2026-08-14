@@ -1,62 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Fazer Reserva</title>
 </head>
+
 <body>
 
+    <table border="1" width="100%">
+        <tr>
+            <td rowspan="2" width="20%">
 
-<table border="1", width="100%">
-    <tr>
-        <td rowspan="2", width="20%">
+                <header>
+                    <h1>Hotel Pet</h1>
 
-    <header>
-        
-        <h1>Hotel Pet</h1>
+                    <a href="Pets.html">
+                        <img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">
+                        Pet
+                    </a>
+                    <br>
 
-                <a href="Pets.html"><img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">Pet</a><br>
-                <a href="Usuarios.html"><img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">Usuários</a><br>
-                <a href="Configuracoes.html"><img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">Configurações</a><br>
-                <a href="Reserva.html"><img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">Reservas</a>
+                    <a href="Reserva.html">
+                        <img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">
+                        Reservas
+                    </a>
+                </header>
 
-    </header>
+            </td>
 
-        </td>
+            <td>
+                <p>
+                    <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário">
+                </p>
 
-        <td>
-        <p> <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário"> </p>
-        <p> João da Silva</p>
-        </td>
+                <p>João da Silva</p>
+            </td>
+        </tr>
 
-    </tr>
+        <tr>
+            <td>
 
-    <tr>
-        <td>
+                <p>Home / Reservas / Nova reserva</p>
 
-    <p>Home / revervas / nova reserva</p>
+                <h2>Fazer reserva</h2>
 
-    <h2>Fazer reserva</h2>
+                <form>
+                    <fieldset>
 
-    <form>
-        <fieldset>
-        <p><label> Pet * <br> <input type="text" > </label></p>
-        <p><label> Período * <br> <input type="date" > <input type="date" > </label></p>
-        <p><label> Notas <br> <textarea rows="5" cols="50"></textarea> </label></p>
+                        <p>
+                            <label>
+                                Pet *<br>
+                                <input type="text">
+                            </label>
+                        </p>
 
-        <p>Total das diárias: <strong>R$ 40,00</strong></p>
+                        <p>
+                            <label>
+                                Período *<br>
+                                <input type="date">
+                                <input type="date">
+                            </label>
+                        </p>
 
-        <p>
-            <button type="submit"><img src="Imagens/salvar.jpg" width="20" height="20" alt="Ícone de salvar"> Salvar </button>
-            <button type="reset"><img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar"> Limpar</button>
-        </p>
-    </fieldset>
-    </form>
+                        <p>
+                            <label>
+                                Notas<br>
+                                <textarea rows="5" cols="50"></textarea>
+                            </label>
+                        </p>
 
-         </td>
-    </tr>
-    
-</table>
+                        <p>
+                            Total das diárias: <strong>R$ 40,00</strong>
+                        </p>
+
+                        <p>
+                            <button type="submit">
+                                <img src="Imagens/salvar.jpg"
+                                     width="20"
+                                     height="20"
+                                     alt="Ícone de salvar">
+                                Salvar
+                            </button>
+
+                            <button type="reset">
+                                <img src="Imagens/limpar.jpg"
+                                     width="20"
+                                     height="20"
+                                     alt="Ícone de limpar">
+                                Limpar
+                            </button>
+                        </p>
+
+                    </fieldset>
+                </form>
+
+            </td>
+        </tr>
+    </table>
 
 </body>
+
 </html>
