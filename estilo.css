@@ -67,15 +67,34 @@ section {
     border: 1px solid black;
     padding: 10px;
     text-align: right;
-}
+    align-items: center;
+    }
 
 section p {
     margin-right: 5%;
 }
 
 main {
+    border: 1px solid black;
     min-width: 0;
     padding: 15px;
+}
+
+.imagemlado {
+    float: right;
+    width: clamp(120px, 20vw, 300px); 
+    height: auto;
+    margin: 20px 0 0 20px;
+}
+
+.imagemlado img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagembaixo{
+    margin-left: 5%;
 }
 
 fieldset {
@@ -86,20 +105,9 @@ fieldset {
     padding: 15px;
 }
 
-.imagemlado {
-    float: right;
-    width: 10%;
-    height: auto;
-    margin: 25px 150px 0 20px;
-}
-
-.imagembaixo{
-    margin-left: 5%;
-}
-
 label {
     display: block;
-    width: clamp(50%, 65%, 70%);
+    width: clamp(42%, 60%, 70%);
     margin-left: 5%;
 }
 
