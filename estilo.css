@@ -17,9 +17,10 @@ h1 {
 }
 
 h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 30px;
     font-weight: 100;
+    margin-left: 2%;
 }
 
 .layout {
@@ -32,9 +33,9 @@ h2 {
 
 header {
     grid-row: 1 / 3;
+    min-height: 100vh;
     border: 1px solid black;
     padding: 10px;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,9 +44,9 @@ header {
 header a {
     display: block;
     width: 100%;
-    max-width: 170px;
+    max-width: 200px;
     padding: 10px;
-    margin: 0;
+    margin: 2%;
     text-decoration: none;
 }
 
@@ -55,56 +56,70 @@ header a:hover {
 }
 
 header img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
 section {
+    min-height: 100px;
     border: 1px solid black;
     padding: 10px;
-    min-height: 100px;
     text-align: right;
 }
 
-main {
-    border: 1px solid black;
-    padding: 10px;
-    min-width: 0;
+section p {
+    margin-right: 5%;
 }
 
-form {
-    background-color: #f1efef;
+main {
+    min-width: 0;
+    padding: 15px;
+}
+
+fieldset {
     width: 100%;
+    min-width: 0;
+    background-color: #f1efef;
     border: none;
+    padding: 15px;
+}
+
+.imagemlado {
+    float: right;
+    width: 10%;
+    height: auto;
+    margin: 25px 150px 0 20px;
+}
+
+.imagembaixo{
+    margin-left: 5%;
+}
+
+label {
+    display: block;
+    width: clamp(50%, 65%, 70%);
+    margin-left: 5%;
 }
 
 input,
 select {
-    display: inline-block;
-    width: 80%;
-    max-width: 100%;
+    display: block;
+    width: 100%;
     padding: 10px;
     font-size: 1.1rem;
 }
 
-label {
-    display: inline-block;
-    width: 100%;
-    padding: 0px 0 0px 10%;
-}
-
 button[type="submit"] {
     padding: 10px 20px;
-    margin-left: 10%;
-    margin-right: 33%;
+    margin-left: 5%;
+    margin-right: 40%;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 1.1rem;
-
 }
 
 button[type="reset"] {
@@ -114,7 +129,6 @@ button[type="reset"] {
     border: 1px solid blue;
     cursor: pointer;
     font-size: 1.1rem;
-
 }
 
 table {
