@@ -19,16 +19,22 @@
     box-sizing: border-box;
 }
 
-.criadoem {
+.data {
     display: flex;
     gap: 3px;
 }
 
-.criadoem input {
+.data input {
     flex: 1;
     min-width: 0;
 }
 
+textarea {
+    width: 100%;
+    height: clamp(100px, 8vw, 180px);
+    box-sizing: border-box;
+    resize: vertical;
+}
 
 
 
