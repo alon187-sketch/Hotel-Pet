@@ -1,0 +1,92 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    table-layout: auto;
+    text-align: left;
+
+}
+
+thead tr {
+    background-color: #d3d3d3;
+    height: 50px;
+}
+
+thead th {
+    color: #0057d9;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 8px 10px;
+}
+
+thead th:nth-child(n+3):not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    background-image: url("Imagens/seta.svg");
+}
+
+tbody tr {
+    height: 50px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dedede;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+tbody td {
+    padding: 5px 10px;
+    color: #222;
+    white-space: nowrap;
+}
+
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+tbody img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+}
+
+tbody a {
+    color: #d14bd8;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+tbody a:hover {
+    color: #8e2195;
+}
+
+.status {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.status.ativo {
+    color: #00a651;
+    border: 2px solid #00a651;
+}
+
+.status.inativo {
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d;
+    padding-left: 9px;
+}
