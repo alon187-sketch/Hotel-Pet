@@ -4,49 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Fazer Reserva</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilousuario.css">
 </head>
 
 <body>
 
-    <table border="1" width="100%">
-        <tr>
-            <td rowspan="2" width="20%">
+    <div class="layout">
 
-                <header>
-                    <h1>Hotel Pet</h1>
+        <header>
+            <h1>Hotel Pet</h1>
 
-                    <a href="Pets.html">
-                        <img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">
-                        Pet
-                    </a>
-                    <br>
+            <a href="Pets.html">
+                <img src="Imagens/pet.jpg" alt="Ícone de pet">
+                Pets
+            </a>
 
-                    <a href="Reserva.html">
-                        <img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">
-                        Reservas
-                    </a>
-                </header>
+            <a href="Reserva.html">
+                <img src="Imagens/reservas.jpg" alt="Ícone de reservas">
+                Reservas
+            </a>
+        </header>
 
-            </td>
+        <section>
+            <p>
+                <img src="Imagens/usuário.jpg"
+                     width="50"
+                     height="50"
+                     alt="Imagem do usuário">
+                João da Silva
+            </p>
+        </section>
 
-            <td>
-                <p>
-                    <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário">
-                </p>
+        <main>
 
-                <p>João da Silva</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-
-                <p>Home / Reservas / Nova reserva</p>
-
-                <h2>Fazer reserva</h2>
+            <p>Home / Reservas / Nova reserva</p>
 
                 <form>
                     <fieldset>
+
+                        <h2>Fazer reserva</h2>
 
                         <p>
                             <label>
@@ -56,11 +53,13 @@
                         </p>
 
                         <p>
-                            <label>
-                                Período *<br>
-                                <input type="date">
-                                <input type="date">
-                            </label>
+                            <div>
+                                <label for="Periodo"> Período:</label>
+                                <div class="data"  style="margin-left: 5%; width: 60%;">
+                                    <input type="date" id="criado">
+                                    <input type="date" style="margin-left: 10%;">
+                                </div>
+                        </div>
                         </p>
 
                         <p>
@@ -71,10 +70,10 @@
                         </p>
 
                         <p>
-                            Total das diárias: <strong>R$ 40,00</strong>
+                            <p style="margin-left: 5%;">Total das diárias: <strong> R$ 40,00</strong> </p>
                         </p>
 
-                        <p>
+                        <p class="BotoesSalvarLimpar">
                             <button type="submit">
                                 <img src="Imagens/salvar.jpg"
                                      width="20"
@@ -94,11 +93,6 @@
 
                     </fieldset>
                 </form>
-
-            </td>
-        </tr>
-    </table>
-
 </body>
 
 </html>

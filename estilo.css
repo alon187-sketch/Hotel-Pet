@@ -144,6 +144,12 @@ select {
     border: none;
 }
 
+.BotoesSalvarLimpar {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
 button {
     min-height: 40px;
     padding: 8px 20px;
@@ -160,6 +166,10 @@ button {
 button[type="submit"] {
     background-color: #007bff;
     color: white;
+}
+
+button[type="reset"] {
+margin-right: 35%;
 }
 
 .voltar {
