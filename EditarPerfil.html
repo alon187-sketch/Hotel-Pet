@@ -5,56 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar perfil</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-    <table border="1" width="100%">
-        <tr>
-            <td rowspan="2" width="30%">
+            <div class="layout">
 
-                <header>
-                    <h1>Hotel Pet</h1>
+                    <header>
+                        <h1>Hotel Pet</h1>
 
-                    <a href="Pets.html">
-                        <img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">
-                        Pet
-                    </a>
-                    <br>
+                        <a href="Pets.html">
+                            <img src="Imagens/pet.jpg" alt="Ícone de pet"> Pets
+                        </a>
 
-                    <a href="Usuarios.html">
-                        <img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">
-                        Usuários
-                    </a>
-                    <br>
+                        <a href="Usuarios.html">
+                            <img src="Imagens/usuários.jpg" alt="Ícone de usuários" >Usuários
+                        </a>
+            
+                        <a href="Configuracoes.html">
+                            <img src="Imagens/configuracoes.jpg" alt="Ícone de configurações" align="center">Configurações
+                        </a>
+                    
+                        <a href="Reserva.html">
+                            <img src="Imagens/reservas.jpg" alt="Ícone de reservas">Reservas
+                        </a>
+                    </header>
+            
+                <section>
+                        <p>
+                            <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário" style="vertical-align: middle; align: center">
 
-                    <a href="Configuracoes.html">
-                        <img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">
-                        Configurações
-                    </a>
-                    <br>
-
-                    <a href="Reserva.html">
-                        <img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">
-                        Reservas
-                    </a>
-                </header>
-
-            </td>
-
-            <td>
-                <p>
-                    <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário">
-                </p>
-
-                <p>João da Silva</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
+                            João da Silva
+                        </p>
+                </section>
 
                 <main>
+
                     <p>Home / Editar Perfil</p>
 
                     <form>
@@ -90,19 +77,27 @@
                                 </label>
                             </p>
 
-                            <br>
+                           
+                            <p>
+                                <label>
+                                    Função<br>
 
-                            <label>Função<br></label>
+                                <select name="funcao">
+                                    <option value="Funcionario">Funcionário</option>
+                                    <option value="Gerente">Gerente</option>
+                                    <option value="cliente">Cliente</option>
+                                </select>
+                                </label>
 
-                            <select name="funcao">
-                                <option value="Funcionario">Funcionário</option>
-                                <option value="cliente">Cliente</option>
-                                <option value="Gerente">Gerente</option>
-                            </select>
+                            </p>
 
-                            <br>
 
-                            <img src="Imagens/quadrodo comx.jpg" width="150" height="150" alt="Imagem com X">
+                            <div class="imagembaixo">
+                                <img src="Imagens/quadrodo comx.jpg"
+                                    width="100"
+                                    height="100"
+                                    alt="Imagem">
+                            </div>
 
                             <br>
 
@@ -119,11 +114,6 @@
                         </fieldset>
                     </form>
                 </main>
-
-            </td>
-        </tr>
-    </table>
-
-</body>
+    </body>
 
 </html>
