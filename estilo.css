@@ -135,7 +135,6 @@ select {
 .Botoes {
     display: flex;
     justify-content: flex-start;
-    gap: 0%;
     border: none;
 }
 
@@ -146,7 +145,8 @@ select {
 }
 
 button {
-    padding: 10px 20px;
+    min-height: 40px;
+    padding: 8px 20px;
     background-color: white;
     color: #007bff;
     border: 2px solid blue;
@@ -154,6 +154,7 @@ button {
     font-size: 1.1rem;
     border-radius: 5px;
     margin-left: 5%;
+    white-space: nowrap;
 }
 
 button[type="submit"] {
