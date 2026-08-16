@@ -162,6 +162,33 @@ button[type="submit"] {
     color: white;
 }
 
+.voltar {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.voltar:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.statusfinalizada{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
 table {
     width: 100%;
     max-width: 100%;

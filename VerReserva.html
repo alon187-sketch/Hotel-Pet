@@ -4,38 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Reserva</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilousuario.css">
+    
+
+    <style>
+        table td:first-child {
+            text-align: right;
+        }
+
+        table td:nth-child(2) {
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
 
-    
-<table border="1">
-    <tr>
-        <td rowspan="2", whidth="20%">
-            <header>
-                <h1>Hotel Pet</h1>
+    <div class="layout">
 
-                <a href="Pets.html"><img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">Pet</a><br>
-                <a href="Reserva.html"><img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">Reservas</a>
+        <header>
+            <h1>Hotel Pet</h1>
 
-            </header>
-        </td>
+            <a href="Pets.html">
+                <img src="Imagens/pet.jpg" alt="Ícone de pet">
+                Pets
+            </a>
 
-        <td>
-        <p> <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário"> </p>
-        <p> João da Silva</p>
-        </td>
+            <a href="Reserva.html">
+                <img src="Imagens/reservas.jpg" alt="Ícone de reservas">
+                Reservas
+            </a>
+        </header>
 
-    </tr>
+        <section>
+            <p>
+                <img src="Imagens/usuário.jpg"
+                     width="50"
+                     height="50"
+                     alt="Imagem do usuário">
+                João da Silva
+            </p>
+        </section>
 
-    <tr>
-        <td>
-
-    <main>
+        <main>
 
         <p>Home / reservas / ver reserva</p>
+
         <form>
             <fieldset>
+
                 <h2>Ver reserva</h2>
 
                 <table>
@@ -88,7 +106,9 @@
 
                     <tr>
                         <td>Status:</td>
-                        <td><input type="button" value="Finalizada"></td>
+                        <td>
+                            <span class="statusfinalizada">Finalizada</span>
+                        </td>
                     </tr>
 
                     <tr>
@@ -117,7 +137,7 @@
 
                 <br>
 
-                <a href="Reserva.html"> ← Voltar</a>
+                <a class="voltar" href="Reserva.html"> ← Voltar</a>
 
         </fieldset>
 
