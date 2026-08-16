@@ -1,0 +1,35 @@
+.linha-formulario {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.campo {
+    flex: 1;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.criadoem {
+    display: flex;
+    gap: 3px;
+}
+
+.criadoem input {
+    flex: 1;
+    min-width: 0;
+}
+
+
+
+
+
