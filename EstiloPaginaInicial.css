@@ -1,0 +1,153 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .layout {
+            width: 100%;
+            max-width: 680px;
+            min-height: 420px;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 7px;
+        }
+
+        header {
+            width: 100%;
+            height: 100%;
+        }
+
+        header img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        main {
+            background-color: #e6e6e6;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 12px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0755e8;
+            font-size: 21px;
+            margin: 0 0 80px;
+        }
+
+        .campo {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        .campo input[type="text"],
+        .campo input[type="password"] {
+            width: 100%;
+            height: 20px;
+            padding: 4px 7px;
+            border: 1px solid #aaa;
+            border-radius: 2px;
+            font-size: 8px;
+            outline: none;
+        }
+
+        .opcoes {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: -12px;
+            margin-bottom: 28px;
+            font-size: 7px;
+        }
+
+        .opcoes label {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .opcoes input[type="checkbox"] {
+            margin: 0;
+            width: 11px;
+            height: 11px;
+            accent-color: #0755e8;
+        }
+
+        a {
+            color: #0755e8;
+            text-decoration: none;
+        }
+
+        .botao {
+            width: 100%;
+            height: 20px;
+            border: none;
+            border-radius: 2px;
+            background-color: #0755e8;
+            color: white;
+            font-size: 8px;
+            cursor: pointer;
+        }
+
+        .separador {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 27px 0 12px;
+            font-size: 8px;
+            color: #555;
+        }
+
+        .separador::before,
+        .separador::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #777;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .redes img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .criar-conta {
+            text-align: center;
+            font-size: 10px;
+            margin: 0;
+        }

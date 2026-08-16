@@ -5,57 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilousuario.css">
+    <link rel="stylesheet" href="estilotabela.css">
+
 </head>
 
 <body>
 
-    <table border="1">
-        <tr>
-            <td rowspan="2">
+            <div class="layout">
 
-                <header>
-                    <h1>Hotel Pet</h1>
+                    <header>
+                        <h1>Hotel Pet</h1>
 
-                    <a href="Pets.html">
-                        <img src="Imagens/pet.jpg" width="20" height="20" alt="Ícone de pet">
-                        Pet
-                    </a>
-                    <br>
+                        <a href="Pets.html">
+                            <img src="Imagens/pet.jpg" alt="Ícone de pet"> Pets
+                        </a>
 
-                    <a href="Usuarios.html">
-                        <img src="Imagens/usuários.jpg" width="20" height="20" alt="Ícone de usuários">
-                        Usuários
-                    </a>
-                    <br>
+                        <a href="Usuarios.html">
+                            <img src="Imagens/usuários.jpg" alt="Ícone de usuários" >Usuários
+                        </a>
 
-                    <a href="Configuracoes.html">
-                        <img src="Imagens/configuracoes.jpg" width="20" height="20" alt="Ícone de configurações">
-                        Configurações
-                    </a>
-                    <br>
+                        <a href="Configuracoes.html">
+                            <img src="Imagens/configuracoes.jpg" alt="Ícone de configurações" align="center">Configurações
+                        </a>
+                    
+                        <a href="Reserva.html">
+                            <img src="Imagens/reservas.jpg" alt="Ícone de reservas">Reservas
+                        </a>
+                    </header>
 
-                    <a href="Reserva.html">
-                        <img src="Imagens/reservas.jpg" width="20" height="20" alt="Ícone de reservas">
-                        Reservas
-                    </a>
-                </header>
+                <section>
+                        <p>
+                            <img src="Imagens/usuário.jpg" height="50" width="50" alt="Imagem do usuário" style="vertical-align: middle; align: center">
 
-            </td>
-
-            <td>
-                <p>
-                    <img src="Imagens/usuário.jpg"
-                         height="50"
-                         width="50"
-                         alt="Imagem do usuário">
-                </p>
-
-                <p>João da Silva</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
+                            João da Silva
+                        </p>
+                </section>
 
                 <main>
 
@@ -66,69 +52,68 @@
 
                             <h2>Pets</h2>
 
-                            <section>
+                        <fieldset >
+                            <section class="Botoes" style="width: 40%; height: 50px;">
                                 <p><button type="button">+ Novo Pet</button></p>
                             </section>
 
-                            <fieldset>
+                        <fieldset class="fieldsetinterno">
 
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <label>
-                                                Id:<br>
-                                                <input type="text">
-                                            </label>
-                                        </td>
+                <div class="linha-formulario">
 
-                                        <td>
-                                            <label>
-                                                Raça:<br>
-                                                <input type="text">
-                                            </label>
-                                        </td>
-                                    </tr>
+                    <div class="campo">
+                        <label for="id">Id:</label>
+                        <input type="text" id="id">
+                    </div>
 
-                                    <tr>
-                                        <td>
-                                            <label>
-                                                Nome:<br>
-                                                <input type="text">
-                                            </label>
-                                            <br>
-                                        </td>
+                    <div class="campo">
+                        <label for="raca">Raça:</label>
+                        <input type="text" id="raca">
+                    </div>
 
-                                        <td>
-                                            <label>
-                                                Tamanho:<br>
-                                                <input type="number" step="0.01">
-                                            </label>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <br>
+                </div>
 
-                                <button type="submit">
-                                    <img src="Imagens/pesquisar.jpg"
-                                         width="20"
-                                         height="20"
-                                         alt="Ícone de Pesquisar">
-                                    Pesquisar
-                                </button>
+                <div class="linha-formulario">
 
-                                <button type="reset">
-                                    <img src="Imagens/limpar.jpg"
-                                         width="20"
-                                         height="20"
-                                         alt="Ícone de limpar">
-                                    Limpar
-                                </button>
-                                <br>
+                    <div class="campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome">
+                    </div>
 
-                            </fieldset>
+                    <div class="campo">
+                        <label for="tamanho">Tamanho:</label>
+                        <input type="number" id="tamanho" step="0.01">
+                    </div>
 
-                            <table border="1" width="100%">
+                </div>
+
+                </fieldset>
+
+                <section class="BotoesPesquisarLimpar">
+
+                    <button type="submit">
+                        <img src="Imagens/pesquisar.jpg"
+                            width="20"
+                            height="20"
+                            alt="Ícone de Pesquisar">
+                        Pesquisar
+                    </button>
+
+                    <button type="reset">
+                        <img src="Imagens/limpar.jpg"
+                            width="20"
+                            height="20"
+                            alt="Ícone de limpar">
+                        Limpar
+                    </button>
+
+                </section>
+
+            </fieldset>
+
+            <fieldset>
+                
+                <table>
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -180,14 +165,13 @@
                                 </tbody>
                             </table>
 
+                            </fieldset>
+
                         </fieldset>
                     </form>
 
                 </main>
 
-            </td>
-        </tr>
-    </table>
 
 </body>
 

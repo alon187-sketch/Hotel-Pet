@@ -3,85 +3,102 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="EstiloPaginaInicial.css">
+
 </head>
 
 <body>
 
-    <table width="100%">
-        <tr>
+    <div class="layout">
 
-            <td>
-                <img src="Imagens/quadrodo comx.jpg"
-                     width="370"
-                     height="370"
-                     alt="Imagem do Hotel Pet">
-            </td>
+        <header>
+            <img src="Imagens/quadrodo comx.jpg"
+                 alt="Imagem do Hotel Pet">
+        </header>
 
-            <td>
-                <form>
-                    <fieldset>
+        <main>
 
-                        <h2>Hotel Pet</h2>
+            <form>
 
-                        <p>
-                            <label for="login">
-                                <input type="text" placeholder="Login">
-                            </label>
-                        </p>
+                <fieldset>
 
-                        <p>
-                            <label for="senha">
-                                <input type="password" placeholder="Senha">
-                            </label>
-                        </p>
+                    <h2>Hotel Pet</h2>
 
-                        <p>
-                            <label>
-                                <input type="checkbox">
-                                Mantenha-me conectado
-                            </label>
+                    <div class="campo">
+                        <label for="login">
+                            <input type="text"
+                                   id="login"
+                                   name="login"
+                                   placeholder="Login">
+                        </label>
+                    </div>
 
-                            <a href="esqueci-senha.html">Esqueci a senha</a>
-                        </p>
+                    <div class="campo">
+                        <label for="senha">
+                            <input type="password"
+                                   id="senha"
+                                   name="senha"
+                                   placeholder="Senha">
+                        </label>
+                    </div>
 
-                        <button type="submit">Enviar</button>
+                    <div class="opcoes">
 
-                        <p>__________________ou___________________</p>
+                        <label for="conectado">
+                            <input type="checkbox"
+                                   id="conectado"
+                                   name="conectado">
+                            Mantenha-me conectado
+                        </label>
 
-                        <p>
-                            <a href="https://www.facebook.com" target="_blank">
-                                <img src="Imagens/Facebook.jpg"
-                                     alt="Facebook"
-                                     width="30"
-                                     height="30">
-                            </a>
+                        <a href="esqueci-senha.html">
+                            Esqueci a senha
+                        </a>
 
-                            <a href="https://twitter.com/#Twitter" target="_blank">
-                                <img src="Imagens/twitter.jpg"
-                                     alt="Twitter"
-                                     width="30"
-                                     height="30">
-                            </a>
+                    </div>
 
-                            <a href="https://www.google.com/#Google" target="_blank">
-                                <img src="Imagens/Google.jpg"
-                                     alt="Google"
-                                     width="30"
-                                     height="30">
-                            </a>
-                        </p>
+                    <button class="botao" type="submit">
+                        Enviar
+                    </button>
 
-                        <p>
-                            <a href="CadastrarUsuario.html">Criar uma conta</a>
-                        </p>
+                    <div class="separador">
+                        <span>OU</span>
+                    </div>
 
-                    </fieldset>
-                </form>
-            </td>
+                    <div class="redes">
 
-        </tr>
-    </table>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Imagens/Facebook.jpg"
+                                 alt="Facebook">
+                        </a>
+
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="Imagens/twitter.jpg"
+                                 alt="Twitter">
+                        </a>
+
+                        <a href="https://www.google.com" target="_blank">
+                            <img src="Imagens/Google.jpg"
+                                 alt="Google">
+                        </a>
+
+                    </div>
+
+                    <p class="criar-conta">
+                        <a href="CadastrarUsuario.html">
+                            Criar uma conta
+                        </a>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+        </main>
+
+    </div>
 
 </body>
 
