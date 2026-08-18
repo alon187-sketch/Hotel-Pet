@@ -168,9 +168,6 @@ button[type="submit"] {
     color: white;
 }
 
-button[type="reset"] {
-margin-right: 35%;
-}
 
 .voltar {
     display: inline-block;

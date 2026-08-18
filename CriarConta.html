@@ -3,55 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
+    <link rel="stylesheet" href="EstiloPaginaInicial.css">
+
 </head>
 
 <body>
 
-    <table border="1" width="100%" height="100%">
-        <tr>
+    <div class="layout">
 
-            <td width="30%" height="100%">
-                <img src="Imagens/quadrodo comx.jpg"
-                     width="270"
-                     height="270"
-                     alt="Imagem do Hotel Pet">
-            </td>
+        <header>
+            <img src="Imagens/quadrodo comx.jpg"
+                 alt="Imagem do Hotel Pet">
+        </header>
 
-            <td>
+        <main>
 
-                <form>
-                    <fieldset>
+            <form>
 
-                        <h2>Hotel Pet</h2>
+                <fieldset>
 
-                        <p>
-                            <label for="login">
-                                <input type="text" placeholder="Login">
-                            </label>
-                        </p>
+                    <h2>Hotel Pet</h2>
 
-                        <p>
-                            <label for="senha">
-                                <input type="password" placeholder="Senha">
-                            </label>
-                        </p>
+                    <div class="campo">
+                        <label for="login">
+                            <input type="text"
+                                   id="login"
+                                   name="login"
+                                   placeholder="Login">
+                        </label>
+                    </div>
 
-                        <button type="submit">Enviar</button>
+                    <div class="campo">
+                        <label for="senha">
+                            <input type="password"
+                                   id="senha"
+                                   name="senha"
+                                   placeholder="Senha">
+                            <i class="fa-solid fa-eye" id="btn-senha"></i>
+                        </label>
+                    </div>
 
-                        <p>
-                            <a href="Login.html">
-                                Já tem uma conta? Login
-                            </a>
-                        </p>
 
-                    </fieldset>
-                </form>
+                    <button class="botao" type="submit">
+                        Criar Conta
+                    </button>
 
-            </td>
+                    <div class="separador">
+                        <span>OU</span>
+                    </div>
 
-        </tr>
-    </table>
+                    <p class="criar-conta">
+                        <a href="CadastrarUsuario.html">
+                            Criar uma conta?Login
+                        </a>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+        </main>
+
+    </div>
 
 </body>
 

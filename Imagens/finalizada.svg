@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <!-- Background with grid pattern -->
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#a012d4" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="innerGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#222" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base Background -->
+  <rect width="200" height="240" fill="#b01be6" />
+  <rect width="200" height="240" fill="url(#grid)" />
+
+  <!-- White Document Border/Shape -->
+  <!-- Using a thick path with rounded corners to accurately replicate the wide white frame -->
+  <path d="M 45 25 
+           L 125 25 
+           L 175 75 
+           L 175 205 
+           A 15 15 0 0 1 160 220 
+           L 40 220 
+           A 15 15 0 0 1 25 205 
+           L 25 40 
+           A 15 15 0 0 1 45 25 Z" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="16" 
+        stroke-linejoin="round" 
+        stroke-linecap="round" />
+
+  <!-- Black Folded Corner Graphic -->
+  <path d="M 115 25 L 115 75 L 175 75" fill="none" stroke="#0d0d0d" stroke-width="18" stroke-linejoin="miter" stroke-linecap="square" />
+  <path d="M 115 25 L 115 75 L 175 75" fill="none" stroke="url(#innerGrid)" stroke-width="18" stroke-linejoin="miter" stroke-linecap="square" opacity="0.4" />
+
+  <!-- Center Black Plus Sign -->
+  <path d="M 75 140 L 125 140 M 100 115 L 100 165" fill="none" stroke="#0d0d0d" stroke-width="18" stroke-linecap="round" />
+  <path d="M 75 140 L 125 140 M 100 115 L 100 165" fill="none" stroke="url(#innerGrid)" stroke-width="18" stroke-linecap="round" opacity="0.4" />
+</svg>
