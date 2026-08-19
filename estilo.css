@@ -148,6 +148,9 @@ select {
     display: flex;
     justify-content: space-between;
     border: none;
+    margin-right: 35%;
+    margin-left:2%;
+
 }
 
 button {
