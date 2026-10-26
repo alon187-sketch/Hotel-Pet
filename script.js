@@ -66,3 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+  function sair() {
+    sessionStorage.removeItem('usuarioLogado');
+    if (!confirm("Deseja realmente sair?")) {
+        return;
+    }
+    window.location.href = 'Login.html';
+}
