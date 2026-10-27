@@ -166,7 +166,7 @@ button {
     white-space: nowrap;
 }
 
-button[type="submit"] {
+button[onclick="pesquisarTabela()"] {
     background-color: #007bff;
     color: white;
 }
