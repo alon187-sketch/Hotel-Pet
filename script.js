@@ -67,10 +67,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Função para sair da sessão
   function sair() {
-    sessionStorage.removeItem('usuarioLogado');
     if (!confirm("Deseja realmente sair?")) {
         return;
     }
+
+    sessionStorage.removeItem('usuarioLogado');
+
     window.location.href = 'Login.html';
 }
+
+
+//Login do nome do usuario
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const nomeUsuario = document.querySelector("#nomeUsuario");
+
+    if (nomeUsuario) {
+        const dadosUsuario = sessionStorage.getItem("usuarioLogado");
+
+        if (dadosUsuario === null) {
+            window.location.href = "Login.html";
+        } else {
+            const usuario = JSON.parse(dadosUsuario);
+
+            nomeUsuario.textContent = usuario.nome;
+        }
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.toLowerCase().endsWith("login.html")) {
+        document.querySelector("#usuario").value = "";
+        document.querySelector("#senha").value = "";
+    }
+});
