@@ -83,25 +83,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const nomeUsuario = document.querySelector("#nomeUsuario");
-
-    if (nomeUsuario) {
-        const dadosUsuario = sessionStorage.getItem("usuarioLogado");
-
-        if (dadosUsuario === null) {
-            window.location.href = "Login.html";
-        } else {
-            const usuario = JSON.parse(dadosUsuario);
-
-            nomeUsuario.textContent = usuario.nome;
-        }
-    }
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Limpar os campos ao abrir a página de login
     if (window.location.pathname.toLowerCase().endsWith("login.html")) {
         document.querySelector("#usuario").value = "";
         document.querySelector("#senha").value = "";
     }
+
+// Carregar o cabeçalho nas páginas
+
+    const elementoCabecalho = document.querySelector("#cabecalho");
+
+    if (elementoCabecalho) {
+
+        fetch("cabecalho.html")
+            .then(resposta => resposta.text())
+            .then(html => {
+
+                elementoCabecalho.innerHTML = html;
+
+                // Recuperar o nome do usuário logado
+                const nomeUsuario = document.querySelector("#nomeUsuario");
+                const dadosUsuario = sessionStorage.getItem("usuarioLogado");
+
+                if (dadosUsuario === null) {
+                    window.location.href = "Login.html";
+                } else {
+                    const usuario = JSON.parse(dadosUsuario);
+                    nomeUsuario.textContent = usuario.nome;
+                }
+
+            })
+            .catch(erro => {
+                console.error("Erro ao carregar o cabeçalho:", erro);
+            });
+    }
+
 });
+
+
+    // Chamar a navegação
+    fetch('Navegacao.html')
+    .then(resposta => resposta.text())
+    .then(html => {
+        document.getElementById('Navegacao').innerHTML = html;
+    })
+    .catch(erro => {
+        console.error('Erro ao carregar a Navegação:', erro);
+    });
