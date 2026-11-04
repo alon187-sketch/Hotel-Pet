@@ -130,3 +130,23 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(erro => {
         console.error('Erro ao carregar a Navegação:', erro);
     });
+
+    //Editar reserva
+    function editarReserva(id, status) {
+
+    if (status === "Reservada") {
+        window.location.href = "EditarReserva.html?id=" + id;
+    }
+    else if (status === "Em progresso") {
+        window.location.href = "EditarReservaAndamento.html?id=" + id;
+    }
+    else if (status === "Finalizada") {
+        window.location.href = "EditarReservaFinalizada.html?id=" + id;
+    }
+    else {
+        alert("Status da reserva inválido.");
+    }
+}
+
+
+

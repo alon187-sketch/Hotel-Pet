@@ -25,50 +25,53 @@
                 <form>
                     <fieldset>
 
-                           <h2>Editar reserva</h2>
+                                <label>
+                                    ID:<br>
+                                    <input type="text" id="idReserva" disabled>
+                                </label>
+
 
                            <p>
                                 <label>
-                                    Proprietário *<br>
-                                    <input type="text" required>
+                                    Proprietário*<br>
+                                    <input type="text" id="proprietario" required>
                                 </label>
                             </p>
 
                             <p>
                                 <label>
                                     Pet *<br>
-                                    <input type="text" required>
+                                    <input type="text" id="nomePet" required>
                                 </label>
                             </p>
 
                             <p>
                                 <div>
-                                    <label for="Periodo">Periodo:</label>
+                                    <label for="criado">Criado em:</label>
                                     <div class="data"  style="margin-left: 5%; width: 60%;">
-                                        <input type="date" id="criado">
-                                        <input type="date" style="margin-left: 10%;">
+                                        <input type="date" id="chegada">
+                                        <input type="date" style="margin-left: 10%;" id="partida">
                                     </div>
                             </div>
                             </p>
 
                             <p>
-                                <label>
+                                <label for="notas">
                                     Notas<br>
-                                    <textarea> </textarea>
+                                    <textarea id="notas"> </textarea>
                                  </label>
                             </p>
 
                             <p>
-                                <label>Status*</label>
-
-                                <select style="margin-left: 5%; width: 60%;">
-                                    <option value="Reservado" selected>Reservado</option>
-                                    <option value="em-andamento">Em andamento</option>
+                                <label for="status">Status*</label>
+                                <select id="status" style="margin-left: 5%; width: 60%;">
+                                    <option value="Em Progresso">Em progresso</option>
+                                    <option value="Finalizada">Concluído</option>
+                                    <option value="Reservada">Reservada</option>
                                     <option value="cancelado">Cancelado</option>
-                                    <option value="finalizado">Finalizado</option>
+
                                 </select>
                             </p>
-
 
 
                             <p style="margin-left: 5%;">Total das diárias: <strong> R$ 40,00</strong> </p>
@@ -100,6 +103,8 @@
     </main>
     </div>  
     <script src="script.js"></script>
+    <script src="VerReserva.js"></script>
+    <script src="EditarReserva.js"></script>
 </body>
 
 </html>
