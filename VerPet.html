@@ -7,7 +7,6 @@
     <title>Ver Pet</title>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="estilousuario.css">
-    
 
     <style>
         table td:first-child {
@@ -42,88 +41,85 @@
 
         <main>
 
-                    <p>Home / Pets / Ver Pet</p>
+            <p>Home / Pets / Ver Pet</p>
 
-                    <form>
-                        <fieldset>
+            <form>
+                <fieldset>
 
-                            <h2>Ver Pet</h2>
+                    <h2>Ver Pet</h2>
 
-                    <a class="voltar" href="EditarPet.html"">                         
-                        <img src="Imagens/editar.jpg"
-                                width="20"
-                                height="20"
-                                alt="Ícone novo"> Editar</a>
 
-                            <button type="button">
-                                <img src="Imagens/deletar.jpg"
-                                     width="20"
-                                     height="20"
-                                     alt="Ícone de Deletar">
-                                Deletar
-                            </button>
+                    <table>
 
-                            <table>
+                        <tr>
+                            <td>Proprietário:</td>
+                            <td id="viewProprietario">--</td>
+                        </tr>
 
-                                <tr>
-                                    <td>Proprietário:</td>
-                                    <td>José da Silva</td>
-                                </tr>
+                        <tr>
+                            <td>Id:</td>
+                            <td id="viewId">--</td>
+                        </tr>
 
-                                <tr>
-                                    <td>Id:</td>
-                                    <td>1234099871</td>
-                                </tr>
+                        <tr>
+                            <td>Nome:</td>
+                            <td id="viewNome">--</td>
+                        </tr>
 
-                                <tr>
-                                    <td>Nome:</td>
-                                    <td>Max</td>
-                                </tr>
+                        <tr>
+                            <td>Tipo:</td>
+                            <td id="viewTipo">--</td>
+                        </tr>
 
-                                <tr>
-                                    <td>Tipo:</td>
-                                    <td>Cachorro</td>
-                                </tr>
+                        <tr>
+                            <td>Raça:</td>
+                            <td id="viewRaca">--</td>
+                        </tr>
 
-                                <tr>
-                                    <td>Raça:</td>
-                                    <td>Pastor Alemão</td>
-                                </tr>
+                        <tr>
+                            <td>Imagem:</td>
+                            <td>
+                                <img src="Imagens/quadrodo comx.jpg" height="50" width="50" alt="Imagem da reserva">
+                            </td>
+                        </tr>
 
-                                <tr>
-                                    <td>Imagem:</td>
+                        <tr>
+                            <td rowspan="2">Reservas:</td>
+                            <td style="color: blue;" id="viewReserva1">02/05/2021 - 07/05/2021 (completa)</td>
+                        </tr>
 
-                                    <td>
-                                        
-                                        <img src="Imagens/quadrodo comx.jpg"
-                                             height="50"
-                                             width="50"
-                                             alt="Imagem da reserva"
-                                             >
-                                    </td>
-                                </tr>
+                        <tr>
+                            <td style="color: green; text-align: left;" id="viewReserva2">07/05/2021 - 07/05/2021 (em andamento)</td>
+                        </tr>
 
-                                <tr>
-                                    <td rowspan="2">Reservas:</td>
-                                    <td style="color: blue;" >02/05/2021 - 07/05/2021 (completa)</td>
-                                </tr>
+                    </table>
 
-                                <tr>
-                                    <td style="color: green; text-align: left;" >07/05/2021 - 07/05/2021 (em andamento)</td>
-                                </tr>
+                    <br>
+                        <section class="BotoesPesquisarLimpar">
 
-                            </table>
+                    <a type="button" class="voltar" href="Pets.html" width="20" height="20"> ← Voltar</a>
 
-                            <br>
+                    <a id="btnEditarPet" class="voltar" href="#">                        
+                        <img src="Imagens/editar.jpg" width="20" height="20" alt="Ícone novo"> Editar
+                    </a>
 
-                        <a class="voltar" href="Pets.html""> ← Voltar</a>
+                    <button type="button" id="btnDeletarPet">
+                        <img src="Imagens/deletar.jpg" width="20" height="20" alt="Ícone de Deletar">
+                        Deletar
+                    </button>
 
-                        </fieldset>
-                    </form>
 
-                </main>
-                
-<script src="script.js"></script>
+                </fieldset>
+            </form>
+
+        </main>
+
+    </div>
+
+    <!-- Carregamento dos Scripts -->
+    <script src="dadosPets.js"></script>
+    <script src="script.js"></script>
+    <script src="VerPet.js"></script>
 
 </body>
 
