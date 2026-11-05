@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="estilousuario.css">
     <link rel="stylesheet" href="estilotabela.css">
-
 </head>
 
 <body>
 
-        <div class="layout">
+    <div class="layout">
 
         <header>
             <div id="Navegacao"></div>
@@ -21,146 +20,110 @@
 
         <div id="cabecalho"></div>
 
-                <main>
+        <main>
 
-                    <p>Home / Pets</p>
+            <p>Home / Pets</p>
 
-                    <form>
-                        <fieldset>
+            <form>
+                <fieldset>
 
-                            <h2>Pets</h2>
+                    <h2>Pets</h2>
 
-                        <fieldset >
-                            <a style="margin-bottom: 2%;" class="voltar" 
-                            href="CadastrarPet.html">+ Novo Pet </a>
-
+                    <fieldset>
+                        <a style="margin-bottom: 2%;" class="voltar" href="CadastrarPet.html">+ Novo Pet </a>
 
                         <fieldset class="fieldsetinterno">
 
-                <div class="linha-formulario">
+                            <div class="linha-formulario">
 
-                    <div class="campo">
-                        <label for="id">Id:</label>
-                        <input type="text" id="id">
-                    </div>
+                                <div class="campo">
+                                    <label for="id">Id:</label>
+                                    <input type="text" id="id">
+                                </div>
 
-                    <div class="campo">
-                        <label for="Tipo">Tipo:</label>
-                        <input type="text" id="Tipo">
-                    </div>
+                                <div class="campo">
+                                    <label for="Tipo">Tipo:</label>
+                                    <input type="text" id="Tipo">
+                                </div>
 
-                    <div class="campo">
-                        <label for="raca">Raça:</label>
-                        <input type="text" id="raca">
-                    </div>
+                                <div class="campo">
+                                    <label for="raca">Raça:</label>
+                                    <input type="text" id="raca">
+                                </div>
 
-                </div>
+                            </div>
 
-                <div class="linha-formulario">
+                            <div class="linha-formulario">
 
-                    <div class="campo">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome">
-                    </div>
+                                <div class="campo">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" id="nome">
+                                </div>
 
-                    <div class="campo">
-                        <label for="tamanho">Tamanho:</label>
-                        <input type="number" id="tamanho" step="0.01">
-                    </div>
+                                <div class="campo">
+                                    <label for="tamanho">Tamanho:</label>
+                                    <input type="text" id="tamanho">
+                                </div>
 
-                </div>
-
-                </fieldset>
-
-                <section class="BotoesPesquisarLimpar">
-
-                    <button type="button" onclick="pesquisarTabela()">
-                        <img src="Imagens/pesquisar.jpg"
-                            width="20"
-                            height="20"
-                            alt="Ícone de Pesquisar">
-                        Pesquisar
-                    </button>
-
-                    <button type="reset">
-                        <img src="Imagens/limpar.jpg"
-                            width="20"
-                            height="20"
-                            alt="Ícone de limpar">
-                        Limpar
-                    </button>                                
-                    
-                    <button type="button" data-navegacao="voltar">
-                     Voltar
-                    </button>
-
-                </section>
-
-            </fieldset>
-
-            <fieldset>
-                
-                <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Id</th>
-                                        <th>Nome</th>
-                                        <th>Tipo</th>
-                                        <th>Raça</th>
-                                        <th>Tamanho</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-
-                                        <td>1234984501</td>
-                                        <td>Max</td>
-                                        <td>Cachorro</td>
-                                        <td>Pastor Alemão</td>
-                                        <td>Grande</td>
-
-                                        <td>
-                                            <a href="EditarPet.html">Editar</a>
-                                            <a href="VerPet.html">Visualizar</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-
-                                        <td>1234984501</td>
-                                        <td>Ginger</td>
-                                        <td>Gato</td>
-                                        <td>Não definida</td>
-                                        <td>Pequeno</td>
-
-                                        <td>
-                                            <a href="EditarPet.html">Editar</a>
-                                            <a href="VerPet.html">Visualizar</a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-
-                            </fieldset>
+                            </div>
 
                         </fieldset>
-                    </form>
 
-                </main>
+                        <section class="BotoesPesquisarLimpar">
 
-<script src="script.js"></script>
-<script src="pesquisa.js"></script>
+                            <button type="button" onclick="pesquisarTabela()">
+                                <img src="Imagens/pesquisar.jpg" width="20" height="20" alt="Ícone de Pesquisar">
+                                Pesquisar
+                            </button>
+
+                            <button type="reset">
+                                <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
+                                Limpar
+                            </button>
+
+                            <button type="button" data-navegacao="voltar">
+                                Voltar
+                            </button>
+
+                        </section>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    <th>Tipo</th>
+                                    <th>Raça</th>
+                                    <th>Tamanho</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <!-- ID adicionado e conteúdo estático removido -->
+                            <tbody id="tabelaPetsBody">
+                                <!-- Preenchido dinamicamente via scriptListaPets.js -->
+                            </tbody>
+                        </table>
+
+                    </fieldset>
+
+                </fieldset>
+            </form>
+
+        </main>
+
+    </div>
+
+    <!-- Scripts na ordem correta -->
+    <script src="DadosPets.js"></script>
+    <script src="ScriptsListaPets.js"></script>
+    <script src="script.js"></script>
+    <script src="pesquisa.js"></script>
 
 </body>
 
