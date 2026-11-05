@@ -17,113 +17,100 @@
         </header>
 
         <div id="cabecalho"></div>
+
         <main>
-                <p>Home / Reservas / Editar Reserva Finalizada</p>
+            <p>Home / Reservas / Editar Reserva Finalizada</p>
 
+            <form>
+                <fieldset>
+                    <h2>Editar reserva</h2>
 
-                <form>
-                    <fieldset>
+                    <p>
+                        <label>
+                            ID:<br>
+                            <input type="text" id="idReserva" disabled>
+                        </label>
+                    </p>
 
-                           <h2>Editar reserva</h2>
-                                <label>
-                                    ID:<br>
-                                    <input type="text" id="idReserva" disabled>
-                                </label>
+                    <p>
+                        <label>
+                            Proprietário*<br>
+                            <input type="text" id="proprietario" required>
+                        </label>
+                    </p>
 
+                    <p>
+                        <label>
+                            Pet *<br>
+                            <input type="text" id="nomePet" required>
+                        </label>
+                    </p>
 
-                           <p>
-                                <label>
-                                    Proprietário*<br>
-                                    <input type="text" id="proprietario" required>
-                                </label>
-                            </p>
+                    <div>
+                        <label for="criado">Criado em:</label>
+                        <div class="data" style="margin-left: 5%; width: 60%;">
+                            <input type="date" id="chegada">
+                            <input type="date" style="margin-left: 10%;" id="partida">
+                        </div>
+                    </div>
 
-                            <p>
-                                <label>
-                                    Pet *<br>
-                                    <input type="text" id="nomePet" required>
-                                </label>
-                            </p>
+                    <p>
+                        <label for="notas">
+                            Notas<br>
+                            <textarea id="notas"></textarea>
+                        </label>
+                    </p>
 
-                            <p>
-                                <div>
-                                    <label for="criado">Criado em:</label>
-                                    <div class="data"  style="margin-left: 5%; width: 60%;">
-                                        <input type="date" id="chegada">
-                                        <input type="date" style="margin-left: 10%;" id="partida">
-                                    </div>
-                            </div>
-                            </p>
+                    <p>
+                        <label for="status">Status*</label>
+                        <select id="status" style="margin-left: 5%; width: 60%;">
+                            <option value="Em progresso">Em progresso</option>
+                            <option value="Finalizada">Finalizada</option>
+                            <option value="Reservada">Reservada</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                    </p>
 
-                            <p>
-                                <label for="notas">
-                                    Notas<br>
-                                    <textarea id="notas"> </textarea>
-                                 </label>
-                            </p>
+                    <p>
+                        <label>
+                            <span style="display: inline-block; padding: 12px 20px; background-color: #B000E0; color: white; border-radius: 5px; cursor: pointer; text-align: center;">
+                                <img src="Imagens/finalizada.svg" width="25" height="25" alt="Finalizado"> 
+                                Adicionar nota Fiscal
+                            </span>
+                            <input style="display: none;" type="file">
+                        </label>
+                    </p>
 
-                            <p>
-                                <label for="status">Status*</label>
+                    <p>
+                        <a style="margin-left: 5%;" href="#">recibo.pdf</a>
+                    </p>
 
-                                <select id="status" style="margin-left: 5%; width: 60%;">
-                                    <option value="Em Progresso">Em progresso</option>
-                                    <option value="concluido">Concluído</option>
-                                    <option value="cancelado">Cancelado</option>
-                                </select>
-                            </p>
+                    <p style="margin-left: 5%;">Total das diárias: <strong>R$ 40,00</strong></p>
 
-                            <label>
-                                
-                                <span style="    display: inline-block;
-                                                padding: 12px 20px;
-                                                background-color: #B000E0;
-                                                color: white;
-                                                border-radius: 5px;
-                                                text-decoration: none;
-                                                cursor: pointer;
-                                                text-align: center;"
-                                                </span> <img src="Imagens/finalizada.svg"
-                                                    width="25"
-                                                    height="25"
-                                                    alt="Finalizado"> 
-                                                    Adicionar nota Fiscal</span>
-                                <input style="display: none;" type="file" required>
-                            </label>
-                            </p>
+                    <p class="BotoesSalvarLimpar">
+                        <button type="submit">
+                            <img src="Imagens/salvar.jpg" width="20" height="20" alt="Ícone de salvar">
+                            Salvar
+                        </button>
 
-                            <p>
-                                <a style="margin-left: 5%;" href="#">recibo.pdf</a>
-                            </p>
+                        <button type="reset">
+                            <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
+                            Limpar
+                        </button>
 
-                            <p style="margin-left: 5%;">Total das diárias: <strong> R$ 40,00</strong> </p>
-                        
-                            <p class="BotoesSalvarLimpar">
-                                <button type="submit">
-                                    <img src="Imagens/salvar.jpg"
-                                        width="20"
-                                        height="20"
-                                        alt="Ícone de salvar">
-                                    Salvar
-                                </button>
+                        <button type="button" data-navegacao="voltar">
+                            Voltar
+                        </button>
+                    </p>
 
-                                <button type="reset">
-                                    <img src="Imagens/limpar.jpg"
-                                        width="20"
-                                        height="20"
-                                        alt="Ícone de limpar">
-                                    Limpar
-                                </button>
-                                                                
-                                <button type="button" data-navegacao="voltar">
-                                Voltar
-                                </button>
-                            </p>
+                </fieldset>
+            </form>
+        </main>
+    </div>
 
-                    </fieldset>
-                </form>
-    </main>
+    <!-- Scripts na ordem correta -->
+    <script src="dados.js"></script>
     <script src="script.js"></script>
-    <script src="VerReserva.js"></script>
     <script src="EditarReserva.js"></script>
 </body>
 

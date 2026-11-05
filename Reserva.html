@@ -8,32 +8,28 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="estilousuario.css">
     <link rel="stylesheet" href="estilotabela.css">
-
-
 </head>
 
 <body>
 
-            <div class="layout">
+    <div class="layout">
 
-             <header>
-                <div id="Navegacao"></div>
-              </header>
+        <header>
+            <div id="Navegacao"></div>
+        </header>
 
-                 <div id="cabecalho"></div>
+        <div id="cabecalho"></div>
 
+        <main>
 
-                <main>
+            <p>Home / Reservas</p>
 
-                    <p>Home / Reservas</p>
+            <form>
+                <fieldset>
 
-                    <form >
-                        <fieldset >
+                    <h2>Reservas</h2>
 
-                            <h2>Reservas</h2>
-
-                    <a style="margin-bottom: 2%;" class="voltar" 
-                    href="FazerReserva.html">+ Nova Reserva </a>
+                    <a style="margin-bottom: 2%;" class="voltar" href="FazerReserva.html">+ Nova Reserva </a>
 
                     <fieldset class="fieldsetinterno">
 
@@ -90,116 +86,58 @@
 
                         </div>
 
-                <section class="BotoesPesquisarLimpar">
+                        <section class="BotoesPesquisarLimpar">
 
-                    <button type="button" onclick="pesquisarTabela()">
-                        <img src="Imagens/pesquisar.jpg"
-                            width="20"
-                            height="20"
-                            alt="Ícone de Pesquisar">
-                        Pesquisar
-                    </button>
+                            <button type="button" onclick="pesquisarTabela()">
+                                <img src="Imagens/pesquisar.jpg" width="20" height="20" alt="Ícone de Pesquisar">
+                                Pesquisar
+                            </button>
 
-                    <button type="reset">
-                        <img src="Imagens/limpar.jpg"
-                            width="20"
-                            height="20"
-                            alt="Ícone de limpar">
-                        Limpar
-                    </button>
+                            <button type="reset">
+                                <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
+                                Limpar
+                            </button>
 
-                    <button type="button" data-navegacao="voltar">
-                     Voltar
-                     </button>
+                            <button type="button" data-navegacao="voltar">
+                                Voltar
+                            </button>
 
-                </section>
+                        </section>
 
-                </fieldset>
-
-                <fieldset>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Id</th>
-                                        <th>Pet</th>
-                                        <th>Chegada</th>
-                                        <th>Partida</th>
-                                        <th>Status</th>
-                                        <th>Total</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-
-                                        <td>1234984501</td>
-                                        <td>Max</td>
-                                        <td>02/05/2021</td>
-                                        <td>07/05/2020</td>
-                                        <td>Reservada</td>
-                                        <td>R$ 40,00</td>
-
-                                        <td>
-                                            <a href="#" onclick="editarReserva('1234984501', 'Reservada'); return false;">Editar</a>      
-                                            <a href="VerReserva.html?id=1234984501">Visualizar</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-
-                                        <td>1234984502</td>
-                                        <td>Ginger</td>
-                                        <td>02/05/2021</td>
-                                        <td>07/05/2020</td>
-                                        <td>Em progresso</td>
-                                        <td>R$ 40,00</td>
-
-                                        <td>
-                                            <a href="#" onclick="editarReserva('1234984502', 'Em progresso'); return false;">Editar</a>      
-                                            <a href="VerReserva.html?id=1234984502">Visualizar</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-
-                                        <td>1234984503</td>
-                                        <td>Max</td>
-                                        <td>02/05/2021</td>
-                                        <td>07/05/2020</td>
-                                        <td>Finalizada</td>
-                                        <td>R$ 40,00</td>
-
-                                        <td>
-                                            <a href="#" onclick="editarReserva('1234984503', 'Finalizada'); return false;">Editar</a>      
-                                            <a href="VerReserva.html?id=1234984503">Visualizar</a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                
-                            </table>
-
-            
                     </fieldset>
 
-            </fieldset>
-            
-</form>
-        <script src="script.js"></script>
-        <script src="pesquisa.js"></script>
-    </main>
+                    <fieldset>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Id</th>
+                                    <th>Pet</th>
+                                    <th>Chegada</th>
+                                    <th>Partida</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <!-- Adicionado o ID e esvaziado as linhas fixas -->
+                            <tbody id="tabelaReservasBody">
+                                <!-- O scriptLista.js vai preencher esta tabela dinamicamente com os dados salvos -->
+                            </tbody>
+
+                        </table>
+                    </fieldset>
+
+                </fieldset>
+            </form>
+
+            <script src="dados.js"></script>
+            <script src="scriptLista.js"></script>
+            <script src="script.js"></script>
+            <script src="pesquisa.js"></script>
+
+        </main>
 
     </div>
 </body>
