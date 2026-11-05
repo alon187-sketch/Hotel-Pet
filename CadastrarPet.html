@@ -21,69 +21,61 @@
         <main>
             <p>Home / Pet / Novo Pet</p>
 
-            <form>
+            <form id="formCadastrarPet">
                 <fieldset>
 
                     <h2>Novo Pet</h2>
 
                     <div class="imagemlado">
-                        <img src="Imagens/quadrodo comx.jpg"
-                            width="200"
-                            height="200"
-                            alt="Imagem">
+                        <img src="Imagens/quadrodo comx.jpg" width="200" height="200" alt="Imagem">
                     </div>
 
                     <p>
                         <label>
                             Proprietário*<br>
-                            <input type="text" required>
+                            <input type="text" id="proprietarioPet" required>
                         </label>
                     </p>
 
                     <p>
                         <label>
                             Nome*<br>
-                            <input type="text" required>
+                            <input type="text" id="nomePet" required>
                         </label>
                     </p>
 
                     <p>
                         <label>
                             Tipo*<br>
-                            <input type="text" required>
+                            <input type="text" id="tipoPet" required>
                         </label>
                     </p>
 
                     <p>
                         <label>
                             Raça*<br>
-                            <input type="text">
+                            <input type="text" id="racaPet" required>
                         </label>
                     </p>
 
                     <p>
                         <label>
                             Tamanho*<br>
-                            <input type="number" step="0.01">
+                            <input type="text" id="tamanhoPet" required>
                         </label>
                     </p>
 
                     <p class="BotoesSalvarLimpar">
                         <button type="submit">
-                            <img src="Imagens/salvar.jpg"
-                                    width="20"
-                                    height="20"
-                                    alt="Ícone de salvar">
+                            <img src="Imagens/salvar.jpg" width="20" height="20" alt="Ícone de salvar">
                             Salvar
                         </button>
 
                         <button type="reset">
-                            <img src="Imagens/limpar.jpg"
-                                    width="20"
-                                    height="20"
-                                    alt="Ícone de limpar">
+                            <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
                             Limpar
                         </button>
+                        
                         <button type="button" data-navegacao="voltar">
                             Voltar
                         </button>
@@ -95,8 +87,10 @@
 
     </div>
 
+    <!-- Ordem de carregamento dos scripts -->
+    <script src="dadosPets.js"></script>
     <script src="script.js"></script>
-
+    <script src="CadastrarPet.js"></script>
 
 </body>
 

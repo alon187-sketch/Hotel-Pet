@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazer Reserva</title>
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="estilousuario.css">
 </head>
 
 <body>
@@ -19,68 +19,81 @@
         <div id="cabecalho"></div>
 
         <main>
+            <p>Home / Reservas / Fazer Reserva</p>
 
-            <p>Home / Reservas / Nova reserva</p>
+            <form id="formCadastrarReserva">
+                <fieldset>
+                    <h2>Fazer Reserva</h2>
 
-                <form>
-                    <fieldset>
+                    <p>
+                        <label>
+                            Proprietário*<br>
+                            <input type="text" id="proprietarioReserva" required>
+                        </label>
+                    </p>
 
-                        <h2>Fazer reserva</h2>
+                    <p>
+                        <label>
+                            Nome do Pet*<br>
+                            <input type="text" id="nomePetReserva" required>
+                        </label>
+                    </p>
 
-                        <p>
-                            <label>
-                                Pet *<br>
-                                <input type="text">
-                            </label>
-                        </p>
+                    <p>
+                        <label>
+                            Data de Chegada*<br>
+                            <input type="date" id="chegadaReserva" required>
+                        </label>
+                    </p>
 
-                        <p>
-                            <div>
-                                <label for="Periodo"> Período:</label>
-                                <div class="data"  style="margin-left: 5%; width: 60%;">
-                                    <input type="date" id="criado">
-                                    <input type="date" style="margin-left: 10%;">
-                                </div>
-                        </div>
-                        </p>
+                    <p>
+                        <label>
+                            Data de Partida*<br>
+                            <input type="date" id="partidaReserva" required>
+                        </label>
+                    </p>
 
-                        <p>
-                            <label>
-                                Notas<br>
-                                <textarea rows="5" cols="50"></textarea>
-                            </label>
-                        </p>
+                    <p>
+                        <label>
+                            Notas / Observações<br>
+                            <textarea id="notasReserva"></textarea>
+                        </label>
+                    </p>
 
-                        <p>
-                            <p style="margin-left: 5%;">Total das diárias: <strong> R$ 40,00</strong> </p>
-                        </p>
+                    <p>
+                        <label>
+                            Total (R$)<br>
+                            <input type="text" id="totalReserva" placeholder="Ex: R$ 40,00" value="R$ 40,00">
+                        </label>
+                    </p>
 
-                        <p class="BotoesSalvarLimpar">
-                            <button type="submit">
-                                <img src="Imagens/salvar.jpg"
-                                     width="20"
-                                     height="20"
-                                     alt="Ícone de salvar">
-                                Salvar
-                            </button>
+                    <p class="BotoesSalvarLimpar">
+                        <button type="submit">
+                            <img src="Imagens/salvar.jpg" width="20" height="20" alt="Ícone de salvar">
+                            Salvar
+                        </button>
 
-                            <button type="reset">
-                                <img src="Imagens/limpar.jpg"
-                                     width="20"
-                                     height="20"
-                                     alt="Ícone de limpar">
-                                Limpar
-                            </button>
-                                                            
-                            <button type="button" data-navegacao="voltar">
-                                Voltar
-                            </button>
-                        </p>
+                        <button type="reset">
+                            <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
+                            Limpar
+                        </button>
 
-                    </fieldset>
-                </form>
+                        <button type="button" data-navegacao="voltar">
+                            Voltar
+                        </button>
+                    </p>
 
-        <script src="script.js"></script>
+                </fieldset>
+            </form>
+        </main>
+
+    </div>
+
+    <!-- Scripts na ordem correta -->
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+    <script src="CadastrarReserva.js"></script>
+
 </body>
 
 </html>

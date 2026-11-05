@@ -40,109 +40,38 @@
         <div id="cabecalho"></div>
 
         <main>
+            <p>Home / Reservas / Ver Reserva</p>
 
-        <p>Home / reservas / ver reserva</p>
-
-        <form>
             <fieldset>
+                <h2>Detalhes da Reserva</h2>
 
-                <h2>Ver reserva</h2>
-
-                    <table>
-
-                        <tr>
-                            <td>Id:</td>
-                            <td id="idReserva"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Proprietário:</td>
-                            <td id="proprietario"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Pet:</td>
-                            <td>
-                                <a href="#" id="nomePet"></a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Chegada:</td>
-                            <td id="chegada"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Partida:</td>
-                            <td id="partida"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Notas:</td>
-                            <td id="notas"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Anotações dos Funcionários:</td>
-                            <td id="anotacoes"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Imagens:</td>
-                            <td>
-                                <img src="Imagens/quadrodo comx.jpg"
-                                    height="50" width="50" alt="Imagem da reserva">
-
-                                <img src="Imagens/quadrodo comx.jpg"
-                                    height="50" width="50" alt="Imagem da reserva">
-
-                                <img src="Imagens/quadrodo comx.jpg"
-                                    height="50" width="50" alt="Imagem da reserva">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Status:</td>
-                            <td>
-                                <span id="status" class="statusfinalizada"></span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Total das diárias:</td>
-                            <td id="total"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Recibo:</td>
-                            <td>
-                                <a href="#" id="recibo">recibo.pdf</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Criado em:</td>
-                            <td id="criadoEm"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Atualizado em:</td>
-                            <td id="atualizadoEm"></td>
-                        </tr>
-
-                    </table>
+                <p>ID da Reserva: <span id="viewId">--</span></p>
+                <p>Proprietário: <span id="viewProprietario">--</span></p>
+                <p>Pet: <span id="viewNomePet">--</span></p>
+                <p>Data de Chegada: <span id="viewChegada">--</span></p>
+                <p>Data de Partida: <span id="viewPartida">--</span></p>
+                <p>Status: <span id="viewStatus">--</span></p>
+                <p>Total: <span id="viewTotal">--</span></p>
+                <p>Notas: <span id="viewNotas">--</span></p>
 
                 <br>
 
-                <a class="voltar" href="Reserva.html"> ← Voltar</a>
+                <p class="BotoesSalvarLimpar">
+                    <a id="btnEditarReserva" class="voltar" href="#">Editar</a>
+                    <button type="button" data-navegacao="voltar">Voltar</button>
+                </p>
 
-        </fieldset>
+            </fieldset>
+        </main>
 
-    </form>
+    </div>
 
-    </main>
+    <script src="dados.js"></script>
+    <script src="scriptLista.js"></script>
     <script src="script.js"></script>
     <script src="VerReserva.js"></script>
+
 </body>
+
 </html>
 

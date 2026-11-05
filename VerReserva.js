@@ -1,77 +1,50 @@
-// Dados das reservas
-
-const reservas = [
-    {
-        id: "1234984501",
-        proprietario: "João da Silva",
-        nomePet: "Max",
-        chegada: "2021-05-02",
-        partida: "2021-05-07",
-        notas: "Ração especial",
-        anotacoes: "Pet tranquilo",
-        status: "Reservada",
-        total: "R$ 40,00",
-        criadoEm: "02/05/2021",
-        atualizadoEm: "07/05/2021"
-    },
-
-    {
-        id: "1234984502",
-        proprietario: "Maria da Silva",
-        nomePet: "Ginger",
-        chegada: "2021-05-02",
-        partida: "2020-05-07",
-        notas: "Pet Agitado.",
-        anotacoes: "Ração especial.",
-        status: "Em progresso",
-        total: "R$ 40,00",
-        criadoEm: "02/05/2021",
-        atualizadoEm: "07/05/2021"
-    },
-
-        {
-        id: "1234984503",
-        proprietario: "João da Silva",
-        nomePet: "Max",
-        chegada: "2021-05-02",
-        partida: "2021-05-07",
-        notas: "Gosta de morder.",
-        anotacoes: "Pet agitado.",
-        status: "Finalizada",
-        total: "R$ 40,00",
-        criadoEm: "02/05/2021",
-        atualizadoEm: "07/05/2021"
-    },
-];
-
+// VerReserva.js
 document.addEventListener("DOMContentLoaded", function () {
+    // 1. Obtém as reservas do localStorage
+    const reservas = obterReservas();
 
+    // 2. Captura o ID passado na URL (?id=...)
+    const parametros = new URLSearchParams(window.location.search);
+    const id = parametros.get("id");
 
+    // 3. Busca a reserva convertendo ambos os IDs para String (evita incompatibilidade de tipo)
+    const reserva = reservas.find(item => String(item.id) === String(id));
 
-        // Recuperar o ID enviado pelo link
-        const parametros = new URLSearchParams(window.location.search);
-        const id = parametros.get("id");
+    if (!reserva) {
+        alert("Reserva não encontrada.");
+        window.location.href = "Reserva.html";
+        return;
+    }
 
-        // Encontrar a reserva correspondente
-        const reserva = reservas.find(item => item.id === id);
+    // 4. Preenche os campos na tela usando textContent
+    if (document.querySelector("#viewId")) document.querySelector("#viewId").textContent = reserva.id;
+    if (document.querySelector("#viewProprietario")) document.querySelector("#viewProprietario").textContent = reserva.proprietario || "Não informado";
+    if (document.querySelector("#viewNomePet")) document.querySelector("#viewNomePet").textContent = reserva.nomePet;
+    if (document.querySelector("#viewChegada")) document.querySelector("#viewChegada").textContent = reserva.chegada;
+    if (document.querySelector("#viewPartida")) document.querySelector("#viewPartida").textContent = reserva.partida;
+    if (document.querySelector("#viewStatus")) document.querySelector("#viewStatus").textContent = reserva.status;
+    if (document.querySelector("#viewTotal")) document.querySelector("#viewTotal").textContent = reserva.total || "R$ 40,00";
+    if (document.querySelector("#viewNotas")) document.querySelector("#viewNotas").textContent = reserva.notas || "Sem observações.";
 
-            if (!reserva) {
-                alert("Reserva não encontrada.");
-                window.location.href = "Reserva.html";
-                return;
+    // 5. Configura o botão Editar para abrir a tela de edição correta
+    const btnEditar = document.querySelector("#btnEditarReserva");
+    if (btnEditar) {
+        btnEditar.addEventListener("click", function (e) {
+            e.preventDefault();
+            // Utiliza a função editarReserva definida no scriptLista.js se disponível, ou faz o redirecionamento direto
+            if (typeof editarReserva === "function") {
+                editarReserva(reserva.id, reserva.status);
+            } else {
+                window.location.href = `EditarReserva.html?id=${reserva.id}`;
             }
+        });
+    }
 
-            document.querySelector("#idReserva").textContent = reserva.id;
-            document.querySelector("#proprietario").textContent = reserva.proprietario;
-            document.querySelector("#nomePet").textContent = reserva.nomePet;
-            document.querySelector("#chegada").textContent = reserva.chegada;
-            document.querySelector("#partida").textContent = reserva.partida;
-            document.querySelector("#notas").textContent = reserva.notas;
-            document.querySelector("#anotacoes").textContent = reserva.anotacoes;
-            document.querySelector("#status").textContent = reserva.status;
-            document.querySelector("#total").textContent = reserva.total;
-            document.querySelector("#criadoEm").textContent = reserva.criadoEm;
-            document.querySelector("#atualizadoEm").textContent = reserva.atualizadoEm;
-
-
+    // 6. Botão Voltar
+    const btnVoltar = document.querySelector('[data-navegacao="voltar"]');
+    if (btnVoltar) {
+        btnVoltar.addEventListener("click", function () {
+            window.location.href = "Reserva.html";
+        });
+    }
 });

@@ -7,10 +7,8 @@ function renderizarTabela() {
     const tbody = document.querySelector("#tabelaReservasBody");
     if (!tbody) return;
 
-    // Obtém as reservas atualizadas do localStorage
     const reservas = obterReservas();
-
-    tbody.innerHTML = ""; // Limpa a tabela
+    tbody.innerHTML = ""; 
 
     reservas.forEach(reserva => {
         const tr = document.createElement("tr");
@@ -34,15 +32,17 @@ function renderizarTabela() {
 }
 
 function editarReserva(id, status) {
-    if (status === "Reservada") {
+    // Normaliza a string do status para ignorar diferenças de maiúsculas/minúsculas
+    const st = String(status).trim().toLowerCase();
+
+    if (st === "reservada") {
         window.location.href = "EditarReserva.html?id=" + id;
-    } else if (status === "Em progresso") {
+    } else if (st === "em progresso" || st === "emprogresso") {
         window.location.href = "EditarReservaAndamento.html?id=" + id;
-    } else if (status === "Finalizada") {
+    } else if (st === "finalizada" || st === "concluído") {
         window.location.href = "EditarReservaFinalizada.html?id=" + id;
-    } else if (status === "Cancelado") {
-        window.location.href = "EditarReserva.html?id=" + id;
     } else {
-        alert("Status da reserva inválido.");
+        // Redirecionamento padrão para a tela genérica de edição caso venha um status diferente
+        window.location.href = "EditarReserva.html?id=" + id;
     }
 }
