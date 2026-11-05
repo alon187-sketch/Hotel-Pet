@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="estilousuario.css">
     <link rel="stylesheet" href="estilotabela.css">
-
-
 </head>
 
 <body>
 
-<div class="layout">
+    <div class="layout">
 
         <header>
             <div id="Navegacao"></div>
@@ -22,244 +20,139 @@
 
         <div id="cabecalho"></div>
 
-    <main>
+        <main>
 
-        <p>Home / Usuários</p>
+            <p>Home / Usuários</p>
 
-        <form>
-            <fieldset>
+            <form>
+                <fieldset>
 
-                <h2>Usuários</h2>
+                    <h2>Usuários</h2>
 
-                <section class="Botoes">
-                   
+                    <section class="Botoes">
+                        <a class="voltar" href="CadastrarUsuario.html">                        
+                            <img src="Imagens/novo.jpg" width="20" height="20" alt="Ícone novo"> Novo
+                        </a>
 
-                    <a class="voltar" href="CadastrarUsuario.html"">                         
-                        <img src="Imagens/novo.jpg"
-                                width="20"
-                                height="20"
-                                alt="Ícone novo"> Novo</a>
+                        <button type="button">
+                            <img src="Imagens/remover.jpg" width="20" height="20" alt="Ícone de remover">
+                            Remover
+                        </button>
 
+                        <button type="button">
+                            <img src="Imagens/mudarstatus.jpg" width="20" height="20" alt="Ícone de mudar status">
+                            Mudar status
+                        </button>
+                    </section>
 
-                    <button type="button">
-                        <img src="Imagens/remover.jpg"
-                                width="20"
-                                height="20"
-                                alt="Ícone de remover">
-                        Remover
-                    </button>
+                    <br>
 
-                    <button type="button">
-                        <img src="Imagens/mudarstatus.jpg"
-                                width="20"
-                                height="20"
-                                alt="Ícone de mudar status">
-                        Mudar status
-                    </button>
-                </section>
+                    <section class="Botoes">
+                        <p style="margin-left: 5%; font-size: 20px;">Visualizar Por:</p>
+                        <button type="button">Usuários</button>
+                        <button type="button">Função</button>
+                    </section>
 
-                <br>
+                    <fieldset class="fieldsetinterno">
 
-                <section class="Botoes">
-                    <p style="margin-left: 5% ; font-size: 20px;">
-                        
-                        Visualizar Por:</p>
+                        <div class="linha-formulario">
+                            <div class="campo">
+                                <label for="id">Id:</label>
+                                <input type="text" id="id">
+                            </div>
 
-                    <button type="button">Usuários</button>
-                    <button type="button">Função</button>
-                </section>
-
-            <fieldset class="fieldsetinterno">
-
-                <div class="linha-formulario">
-
-                    <div class="campo">
-                        <label for="id">Id:</label>
-                        <input type="text" id="id">
-                    </div>
-
-                    <div class="campo">
-                        <label for="criado">Criado em:</label>
-                        <div class="data">
-                            <input type="date" id="criado">
-                            <input type="date">
+                            <div class="campo">
+                                <label for="criado">Criado em:</label>
+                                <div class="data">
+                                    <input type="date" id="criado">
+                                    <input type="date">
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
+                        <div class="linha-formulario">
+                            <div class="campo">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email">
+                            </div>
 
-                <div class="linha-formulario">
+                            <div class="campo">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome">
+                            </div>
+                        </div>
 
-                    <div class="campo">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email">
-                    </div>
+                        <div class="linha-formulario">
+                            <div class="campo">
+                                <label for="status">Status:</label>
+                                <select name="status" id="status">
+                                    <option value="">Selecione</option>
+                                    <option value="ativo">Ativo</option>
+                                    <option value="inativo">Inativo</option>
+                                </select>
+                            </div>
 
-                    <div class="campo">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome">
-                    </div>
+                            <div class="campo">
+                                <label for="funcao">Função:</label>
+                                <select name="funcao" id="funcao">
+                                    <option value="">Selecione</option>
+                                    <option value="gerente">Gerente</option>
+                                    <option value="funcionario">Funcionário</option>
+                                    <option value="cliente">Cliente</option>
+                                </select>
+                            </div>
+                        </div>
 
-                </div>
+                        <section class="BotoesPesquisarLimpar">
+                            <button type="button" onclick="pesquisarTabela()">
+                                <img src="Imagens/pesquisar.jpg" width="20" height="20" alt="Ícone de Pesquisar">
+                                Pesquisar
+                            </button>
 
-                <div class="linha-formulario">
+                            <button type="reset">
+                                <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
+                                Limpar
+                            </button>
 
-                    <div class="campo">
-                        <label for="status">Status:</label>
-                        <select name="status" id="status">
-                            <option value="">Selecione</option>
-                            <option value="ativo">Ativo</option>
-                            <option value="inativo">Inativo</option>
-                        </select>
-                    </div>
+                            <button type="button" data-navegacao="voltar">
+                                Voltar
+                            </button>
+                        </section>
 
-                    <div class="campo">
-                        <label for="funcao">Função:</label>
-                        <select name="funcao" id="funcao">
-                            <option value="">Selecione</option>
-                            <option value="gerente">Gerente</option>
-                            <option value="funcionario">Funcionário</option>
-                            <option value="cliente">Cliente</option>
-                        </select>
-                    </div>
+                    </fieldset>
 
-                </div>
+                    <fieldset>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Foto</th>
+                                    <th>E-mail</th>
+                                    <th>Nome</th>
+                                    <th>Função</th>
+                                    <th>Status</th>
+                                    <th>Criado em</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
 
-                    <section class="BotoesPesquisarLimpar">
-                    <button type="button" onclick="pesquisarTabela()">
-                        <img src="Imagens/pesquisar.jpg"
-                                width="20"
-                                height="20"
-                                alt="Ícone de Pesquisar">
-                        Pesquisar
-                    </button>
+                            <!-- Tabela Dinâmica -->
+                            <tbody id="tabelaUsuariosBody"></tbody>
+                        </table>
+                    </fieldset>
 
-                    <button type="reset">
-                        <img src="Imagens/limpar.jpg"
-                                width="20"
-                                height="20"
-                                alt="Ícone de limpar">
-                        Limpar
+                </fieldset>
+            </form>
 
-                    </button>
+        </main>
 
-                    <button type="button" data-navegacao="voltar">
-                     Voltar
-                     </button>
+    </div>
 
-                </section>
-
-            </fieldset>
-
-            <fieldset>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Foto</th>
-                            <th>E-mail </th>
-                            <th>Nome </th>
-                            <th>Função </th>
-                            <th>Status </th>
-                            <th>Criado em </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-
-                            <td>
-                                <img src="Imagens/usuário.jpg"
-                                        height="50"
-                                        width="50"
-                                        alt="Imagem do usuário">
-                            </td>
-
-                            <td>Joaodasilva@pet.com</td>
-                            <td>João da Silva</td>
-                            <td>Gerente</td>
-                            <td>
-                                <span class="status ativo">Ativo</span>
-                            </td>
-                            <td>19/02/2020</td>
-
-                            <td>
-                                <a href="EditarPerfil.html">Editar</a>
-                                <a href="#">Visualizar</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-
-                            <td>
-                                <img src="Imagens/usuário.jpg"
-                                        alt="Imagem do usuário">
-                            </td>
-
-                            <td>maria@pet.com</td>
-                            <td>Maria da Silva</td>
-                            <td>Funcionário</td>
-                            <td>
-                                <span class="status inativo">Inativo</span>
-                            </td>
-                            <td>19/03/2020</td>
-
-                            <td>
-                                <a href="EditarPerfil.html">Editar</a>
-                                <a href="#">Visualizar</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-
-                            <td>
-                                <img src="Imagens/usuário.jpg"
-                                        height="50"
-                                        width="50"
-                                        alt="Imagem do usuário">
-                            </td>
-
-                            <td>josedasilva@pet.com</td>
-                            <td>José da Silva</td>
-                            <td>Cliente</td>
-                            <td>
-                                <span class="status ativo">Ativo</span>
-                            </td>
-                            <td>19/02/2020</td>
-
-                            <td>
-                                <a href="EditarPerfil.html">Editar</a>
-                                <a href="#">Visualizar</a>
-                            </td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </fieldset>
-
-            </fieldset>
-
-        </form>
-
-    </main>
-
-<script src="script.js"></script>
-<script src="pesquisa.js"></script>
-
+    <!-- Scripts na ordem correta -->
+    <script src="DadosUsuarios.js"></script>
+    <script src="scriptListaUsuario.js"></script>
+    <script src="script.js"></script>
+    <script src="pesquisa.js"></script>
 
 </body>
 

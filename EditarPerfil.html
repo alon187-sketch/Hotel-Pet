@@ -10,7 +10,7 @@
 
 <body>
 
-            <div class="layout">
+    <div class="layout">
 
         <header>
             <div id="Navegacao"></div>
@@ -18,91 +18,85 @@
 
         <div id="cabecalho"></div>
 
-                <main>
+        <main>
 
-                    <p>Home / Editar Perfil</p>
+            <p>Home / Editar Perfil</p>
 
-                    <form>
-                        <fieldset>
+            <form id="formEditarPerfil">
+                <fieldset>
 
-                            <h2>Editar Perfil</h2>
+                    <h2>Editar Perfil</h2>
 
-                            <p>
-                                <label>
-                                    Email*<br>
-                                    <input type="email">
-                                </label>
-                            </p>
+                    <input type="hidden" id="idUsuario">
 
-                            <p>
-                                <label>
-                                    Nome*<br>
-                                    <input type="text">
-                                </label>
-                            </p>
+                    <p>
+                        <label>
+                            Email*<br>
+                            <input type="email" id="email" required>
+                        </label>
+                    </p>
 
-                            <p>
-                                <label>
-                                    Sobrenome*<br>
-                                    <input type="text">
-                                </label>
-                            </p>
+                    <p>
+                        <label>
+                            Nome*<br>
+                            <input type="text" id="nome" required>
+                        </label>
+                    </p>
 
-                            <p>
-                                <label>
-                                    Telefone*<br>
-                                    <input type="number">
-                                </label>
-                            </p>
+                    <p>
+                        <label>
+                            Sobrenome*<br>
+                            <input type="text" id="sobrenome" required>
+                        </label>
+                    </p>
 
-                           
-                            <p>
-                                <label>
-                                    Função<br>
+                    <p>
+                        <label>
+                            Telefone*<br>
+                            <input type="text" id="telefone" required>
+                        </label>
+                    </p>
 
-                                <select name="funcao">
-                                    <option value="Funcionario">Funcionário</option>
-                                    <option value="Gerente">Gerente</option>
-                                    <option value="cliente">Cliente</option>
-                                </select>
-                                </label>
+                    <p>
+                        <label>
+                            Função<br>
+                            <select name="funcao" id="funcao">
+                                <option value="Funcionário">Funcionário</option>
+                                <option value="Gerente">Gerente</option>
+                                <option value="Cliente">Cliente</option>
+                            </select>
+                        </label>
+                    </p>
 
-                            </p>
+                    <div class="imagembaixo">
+                        <img src="Imagens/quadrodo comx.jpg" width="100" height="100" alt="Imagem">
+                    </div>
 
+                    <p class="BotoesSalvarLimpar">
+                        <button type="submit">
+                            <img src="Imagens/salvar.jpg" width="20" height="20" alt="Ícone de salvar">
+                            Salvar
+                        </button>
 
-                            <div class="imagembaixo">
-                                <img src="Imagens/quadrodo comx.jpg"
-                                    width="100"
-                                    height="100"
-                                    alt="Imagem">
-                            </div>
+                        <button type="reset">
+                            <img src="Imagens/limpar.jpg" width="20" height="20" alt="Ícone de limpar">
+                            Limpar
+                        </button>
+                        
+                        <button type="button" data-navegacao="voltar">
+                            Voltar
+                        </button>
+                    </p>
 
-                        <p class="BotoesSalvarLimpar">
-                            <button type="submit">
-                                <img src="Imagens/salvar.jpg"
-                                     width="20"
-                                     height="20"
-                                     alt="Ícone de salvar">
-                                Salvar
-                            </button>
+                </fieldset>
+            </form>
+        </main>
+    </div>
 
-                            <button type="reset">
-                                <img src="Imagens/limpar.jpg"
-                                     width="20"
-                                     height="20"
-                                     alt="Ícone de limpar">
-                                Limpar
-                            </button>
-                            <button type="button" data-navegacao="voltar">
-                                Voltar
-                            </button>
-                        </p>
-
-                        </fieldset>
-                    </form>
-                </main>
+    <script src="dadosUsuarios.js"></script>
     <script src="script.js"></script>
+    <script src="EditarPerfil.js"></script>
 
-    </body>
+</body>
 
 </html>
